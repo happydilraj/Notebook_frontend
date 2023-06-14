@@ -20,7 +20,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="#" style={{fontWeight: "lighter", fontSize: "17px"}}>
-          Notebook 😂
+          Notebook 📒
         </Link>
         <button
           className="navbar-toggler"
