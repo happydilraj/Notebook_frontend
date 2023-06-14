@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import alertContext from '../Context/AlertContext'
 
 const Login = () => {
@@ -45,7 +45,8 @@ const Login = () => {
 
   return (
     <div className='container my-3'>
-        {/* <h2>Login to continue</h2> */}
+        <h2>Login to continue</h2>
+        <p style={{fontWeight: "lighter", fontSize: "11px"}}>( make sure you are signup )</p>
         <form onSubmit={handleclick}>
         <div className="form-group my-5">
             <label htmlFor="email"><h3>Email address</h3></label>

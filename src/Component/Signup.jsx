@@ -46,6 +46,7 @@ const Login = () => {
   return (
     <div>
         <form onSubmit={handleclick}>
+        <h2>Signup to continue</h2>
         <div className="form-group my-5">
             <label htmlFor="name"><h3>Name</h3></label>
             <input type="text" className="form-control" id="name" name='name' value={credentials.name} onChange={onchange} required={true} placeholder="Name"/>
