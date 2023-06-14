@@ -50,11 +50,11 @@ const Login = () => {
         <form onSubmit={handleclick}>
         <div className="form-group my-5">
             <label htmlFor="email"><h3>Email address</h3></label>
-            <input type="email" className="form-control" id="email" name='email' value={credentials.email} required={true} onChange={onchange} placeholder="Email"/>
+            <input type="email" className="form-control" id="email" name='email' value={credentials.email} required={true} minLength={4} onChange={onchange} placeholder="Email"/>
         </div>
         <div className="form-group my-5">
             <label htmlFor="password"><h3>Password</h3></label>
-            <input type="password" className="form-control" id="password" name='password' value={credentials.password} required={true} onChange={onchange} placeholder="Password"/>
+            <input type="password" className="form-control" id="password" name='password' value={credentials.password} minLength={4} required={true} onChange={onchange} placeholder="Password"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
         </form>

@@ -49,15 +49,15 @@ const Login = () => {
         <h2>Signup to continue</h2>
         <div className="form-group my-5">
             <label htmlFor="name"><h3>Name</h3></label>
-            <input type="text" className="form-control" id="name" name='name' value={credentials.name} onChange={onchange} required={true} placeholder="Name"/>
+            <input type="text" className="form-control" id="name" name='name' value={credentials.name} onChange={onchange} minLength={4} required={true} placeholder="Name"/>
         </div>
         <div className="form-group my-5">
             <label htmlFor="email"><h3>Email address</h3></label>
-            <input type="email" className="form-control" id="email" name='email' value={credentials.email} onChange={onchange} required={true}placeholder="Email"/>
+            <input type="email" className="form-control" id="email" name='email' value={credentials.email} onChange={onchange} minLength={4} required={true}placeholder="Email"/>
         </div>
         <div className="form-group my-5">
             <label htmlFor="password"><h3>Password</h3></label>
-            <input type="password" className="form-control" id="password" name='password' value={credentials.password} onChange={onchange} required={true} placeholder="Password"/>
+            <input type="password" className="form-control" id="password" name='password' value={credentials.password} minLength={4} onChange={onchange} required={true} placeholder="Password"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
         </form>
