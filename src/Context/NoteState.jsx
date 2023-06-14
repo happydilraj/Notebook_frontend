@@ -4,6 +4,8 @@ import NoteContext from "./NoteContext";
 const NoteState = (props) => {
 
     const url = "https://notebook-kn2w.onrender.com/api/notes/"
+    // const url = "http://localhost:3000/api/notes/"
+    
 
     const notesInitial = []
 

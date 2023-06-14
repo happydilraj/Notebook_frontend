@@ -80,7 +80,7 @@ const Notes = () => {
                   <label htmlFor="edescription" className="form-label">
                     Description
                   </label>
-                  <input
+                  <textarea
                     type="text"
                     className="form-control"
                     id="edescription"

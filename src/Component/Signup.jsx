@@ -13,6 +13,7 @@ const Login = () => {
    const handleclick = async (e)=>{
     e.preventDefault();
     const url = "https://notebook-kn2w.onrender.com/api/auth/createuser"
+    // const url = "http://localhost:3000/api/auth/createuser"
     const response = await fetch(url, {
         method: "POST",
         mode: "cors",
