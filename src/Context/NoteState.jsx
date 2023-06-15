@@ -6,14 +6,18 @@ const NoteState = (props) => {
     const url = "https://notebook-kn2w.onrender.com/api/notes/"
     // const url = "http://localhost:3000/api/notes/"
     
-
     const notesInitial = []
+    // const notesInitial = [{
+    //     "title": "my title",
+    //     "description": "my description",
+    //     "tag": "my tag"
+    // }]
 
     const [notes, setNotes] = useState(notesInitial)
 
     const getAllNotes = async () => {
 
-    //fetch all notes
+    // fetch all notes
     const response = await fetch(`${url}fetchallnotes`, {
         method: "GET",
         mode: "cors",
@@ -24,6 +28,9 @@ const NoteState = (props) => {
       });
       const json = await response.json()
       setNotes(json.notes)
+         
+        // const note = notes[0];
+        // setNotes(note)
     }
 
     // Add a Note

@@ -1,0 +1,23 @@
+.delete-text, .update-text, .copy-text{
+    left: 30%;
+    color: red;
+    font-size: small;
+    display: none;
+    position: absolute;
+    top: -10%;
+}
+
+.fa-trash:hover + .delete-text{
+    display: block;
+    position: absolute;
+
+}
+
+.fa-pen-to-square:hover + .update-text{
+    display: block;
+    position: absolute;
+}
+
+.fa-copy:hover + .copy-text{
+    display: block;
+}
