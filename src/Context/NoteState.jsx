@@ -4,7 +4,7 @@ import NoteContext from "./NoteContext";
 const NoteState = (props) => {
 
     const url = "https://notebook-kn2w.onrender.com/api/notes/"
-    // const url = "http://localhost:3000/api/notes/"
+    // const url = "http://localhost:5000/api/notes/"
     
     const notesInitial = []
     // const notesInitial = [{
@@ -61,6 +61,7 @@ const NoteState = (props) => {
             },
         });
         const json = response.json()
+        console.log(json)
         const newNotes = notes.filter((note)=>{return note._id!==id});
         setNotes(newNotes);
     }
@@ -77,6 +78,8 @@ const NoteState = (props) => {
             },
             body: JSON.stringify({title,description,tag})
         });
+        const json = response.json()
+        console.log(json)
         const newNote = JSON.parse((JSON.stringify(notes)))
 
         for (let index = 0; index < newNote.length; index++) {
@@ -92,9 +95,10 @@ const NoteState = (props) => {
         }
         setNotes(newNote);
     }
+
     
     return(
-        <NoteContext.Provider value={{notes,addNote, deleteNote, editNote, getAllNotes}}>
+        <NoteContext.Provider value={{notes,addNote, deleteNote, editNote, getAllNotes,getUserDetails}}>
             {props.children}
         </NoteContext.Provider>
     )

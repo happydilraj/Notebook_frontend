@@ -11,7 +11,7 @@ const NotesItem = (props) => {
   const {setmessage,settype,fun,setisAlert} = alert_context
 
   const a = useContext(NoteContext);
-  const {deleteNote,editNote} = a;
+  const {deleteNote} = a;
 
   const deleteNoteFunction = (id)=>{
     deleteNote(id)
